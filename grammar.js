@@ -14,8 +14,6 @@ const VOLUMES = [
 
 module.exports = grammar({
   name: "cooklang",
-  scope: "source.cook",
-  "file-types": [".cook"],
   rules: {
     source_file: ($) => repeat($._definition),
     _definition: ($) => choice($.ingredient, $.comment, $.phrase),
